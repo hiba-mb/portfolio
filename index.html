@@ -42,6 +42,8 @@ h2{font-size:1.15rem;margin:40px 0 12px;padding-bottom:6px;border-bottom:1px sol
 .card ul{margin:6px 0 10px;padding-left:20px}
 .tag{display:inline-block;font-size:.78rem;font-weight:600;padding:2px 9px;border-radius:99px;
   border:1px solid var(--accent);color:var(--accent);margin-left:6px;vertical-align:middle}
+.video{position:relative;aspect-ratio:16/9;margin:12px 0;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.video iframe,.video video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:contain;background:#000}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{background:var(--chip);border-radius:6px;padding:3px 9px;font-size:.84rem}
 .skills dt{font-weight:600;margin-top:12px}
@@ -59,6 +61,7 @@ a{color:var(--accent)}
     <div class="links">
       <a class="btn" href="mailto:hybambarek66@gmail.com">Me contacter</a>
       <a class="btn alt" href="https://www.linkedin.com/in/hiba-mbarek/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn alt" href="https://github.com/hiba-mb" target="_blank" rel="noopener">GitHub</a>
     </div>
   </header>
 
@@ -74,8 +77,10 @@ a{color:var(--accent)}
       <li>Navigation de robots mobiles entre plusieurs étages, puis extension à une flotte de deux robots qui partagent un ascenseur.</li>
       <li>Missions décrites par arbres de comportement (nœuds personnalisés : changement de carte, relocalisation, appel et attente d’ascenseur).</li>
       <li>Fleet Manager : file d’attente FIFO et verrouillage par jeton pour l’accès à l’ascenseur ; frames TF2 isolés par robot.</li>
-      <li>Chaîne de commande Behavior Tree → MQTT → Raspberry Pi 4 → Gazebo 
+      <li>Chaîne de commande Behavior Tree → MQTT → Raspberry Pi 4 → Gazebo ; extension par apprentissage par renforcement (PPO).</li>
     </ul>
+    <div class="video"><video src="demo.mp4" autoplay muted loop playsinline controls preload="auto"></video></div>
+    <p><a href="https://github.com/hiba-mb/Autonomous-Multi-floor-Navigation-with-Elevator-interaction-for-Mobile-Robots" target="_blank" rel="noopener">Code source et documentation sur GitHub →</a></p>
     <div class="chips"><span class="chip">ROS 2 Jazzy</span><span class="chip">Nav2</span><span class="chip">AMCL</span><span class="chip">SLAM Toolbox</span><span class="chip">BehaviorTree.CPP v4</span><span class="chip">Gazebo Harmonic</span><span class="chip">MQTT</span><span class="chip">Raspberry Pi 4</span><span class="chip">stable-baselines3</span></div>
   </div>
 
@@ -83,6 +88,7 @@ a{color:var(--accent)}
     <h3>Application ADAS sous ROS 2</h3>
     <p class="muted">Projet académique · octobre 2025</p>
     <p>Assistance à la conduite miniature avec caméra et LIDAR dans Gazebo : détection de voie, évitement d’obstacles et commande moteur autonome.</p>
+    <div class="video"><video src="demo2.mp4" autoplay muted loop playsinline controls preload="metadata"></video></div>
     <div class="chips"><span class="chip">ROS 2</span><span class="chip">OpenCV</span><span class="chip">Gazebo</span><span class="chip">LIDAR</span></div>
   </div>
 
@@ -109,14 +115,22 @@ a{color:var(--accent)}
 
   <h2>Compétences</h2>
   <dl class="skills">
-    <dt>Robotique</dt>
-    <dd class="chips"><span class="chip">ROS 2</span><span class="chip">Nav2</span><span class="chip">SLAM Toolbox</span><span class="chip">TF2</span><span class="chip">BehaviorTree.CPP</span><span class="chip">Gazebo</span><span class="chip">RViz2</span></dd>
+    <dt>ROS 2 (Jazzy)</dt>
+    <dd class="chips"><span class="chip">Nœuds</span><span class="chip">Topics</span><span class="chip">Services</span><span class="chip">Actions</span><span class="chip">rclcpp</span><span class="chip">rclpy</span><span class="chip">Launch files</span><span class="chip">colcon</span><span class="chip">TF2</span><span class="chip">Namespaces multi-robots</span><span class="chip">Callback groups</span></dd>
+    <dt>Navigation autonome</dt>
+    <dd class="chips"><span class="chip">Nav2</span><span class="chip">AMCL</span><span class="chip">SLAM Toolbox</span><span class="chip">Costmaps</span><span class="chip">Contrôleur RPP</span><span class="chip">Navigation multi-cartes</span><span class="chip">BehaviorTree.CPP v4</span></dd>
+    <dt>Simulation &amp; perception</dt>
+    <dd class="chips"><span class="chip">Gazebo Harmonic</span><span class="chip">RViz2</span><span class="chip">LIDAR</span><span class="chip">Caméra</span><span class="chip">OpenCV</span></dd>
+    <dt>IA &amp; apprentissage</dt>
+    <dd class="chips"><span class="chip">Reinforcement learning (PPO)</span><span class="chip">Gymnasium</span><span class="chip">stable-baselines3</span></dd>
     <dt>Langages</dt>
     <dd class="chips"><span class="chip">C++</span><span class="chip">C</span><span class="chip">Python</span><span class="chip">VHDL</span></dd>
     <dt>Embarqué &amp; communication</dt>
     <dd class="chips"><span class="chip">STM32</span><span class="chip">ESP32</span><span class="chip">Raspberry Pi</span><span class="chip">I²C</span><span class="chip">SPI</span><span class="chip">UART</span><span class="chip">MQTT</span></dd>
     <dt>Environnement</dt>
-    <dd class="chips"><span class="chip">Linux (Ubuntu)</span><span class="chip">OpenCV</span><span class="chip">MATLAB/Simulink</span><span class="chip">TIA Portal</span></dd>
+    <dd class="chips"><span class="chip">Linux (Ubuntu)</span><span class="chip">Git / GitHub</span><span class="chip">MATLAB/Simulink</span><span class="chip">TIA Portal</span></dd>
+    <dt>À approfondir</dt>
+    <dd class="chips"><span class="chip">Vision 3D (RGB-D, PCL)</span><span class="chip">Fusion de capteurs (IMU, encodeurs)</span><span class="chip">Robots physiques</span></dd>
   </dl>
 
   <footer>
