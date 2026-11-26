@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hiba Mbarek · Robotique, ROS 2 &amp; systèmes embarqués</title>
+<style>
+:root{
+  --bg:#f6f7f5; --surface:#ffffff; --text:#161b1a; --muted:#56625f; --line:#dde3e0;
+  --accent:#0b7a6b; --accent-ink:#ffffff; --chip:#e6efec;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1514; --surface:#171e1d; --text:#e9efed; --muted:#9aa8a4; --line:#27312f;
+    --accent:#3cc4ae; --accent-ink:#06201b; --chip:#1f2b29; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1514; --surface:#171e1d; --text:#e9efed; --muted:#9aa8a4; --line:#27312f;
+  --accent:#3cc4ae; --accent-ink:#06201b; --chip:#1f2b29; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:40px 20px 56px}
+h1{font-size:2rem;margin:0 0 4px;letter-spacing:-.01em}
+.role{font-size:1.05rem;margin:0 0 6px}
+.muted{color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+.btn{display:inline-block;padding:9px 16px;border-radius:8px;text-decoration:none;font-weight:600;
+  background:var(--accent);color:var(--accent-ink)}
+.btn.alt{background:transparent;color:var(--text);border:1px solid var(--line)}
+h2{font-size:1.15rem;margin:40px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;margin:0 0 14px}
+.card h3{margin:0 0 4px;font-size:1.05rem}
+.card p{margin:6px 0 10px}
+.card ul{margin:6px 0 10px;padding-left:20px}
+.tag{display:inline-block;font-size:.78rem;font-weight:600;padding:2px 9px;border-radius:99px;
+  border:1px solid var(--accent);color:var(--accent);margin-left:6px;vertical-align:middle}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:var(--chip);border-radius:6px;padding:3px 9px;font-size:.84rem}
+.skills dt{font-weight:600;margin-top:12px}
+.skills dd{margin:6px 0 0}
+footer{margin-top:40px;color:var(--muted);font-size:.9rem}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Hiba Mbarek</h1>
+    <p class="role">Ingénieure en Génie Électrique · Robotique, ROS 2 &amp; systèmes embarqués</p>
+    <p class="muted">Sousse, Tunisie · Disponible immédiatement</p>
+    <div class="links">
+      <a class="btn" href="mailto:hybambarek66@gmail.com">Me contacter</a>
+      <a class="btn alt" href="https://www.linkedin.com/in/hiba-mbarek/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <h2>À propos</h2>
+  <p>Diplômée de l’ENIM (spécialité Électronique Avancée et Nouvelles Technologies). J’aime les systèmes qui relient matériel et logiciel : navigation autonome sous ROS 2, microcontrôleurs, cartes électroniques et IA embarquée. Mes réalisations ont été validées surtout en simulation ; je souhaite maintenant les mener sur des robots physiques et approfondir la vision 3D.</p>
+
+  <h2>Projets</h2>
+
+  <div class="card">
+    <h3>Navigation autonome multi-étages avec interaction ascenseur <span class="tag">PFE · validé en simulation</span></h3>
+    <p class="muted">Enova Robotics · 2026</p>
+    <ul>
+      <li>Navigation de robots mobiles entre plusieurs étages, puis extension à une flotte de deux robots qui partagent un ascenseur.</li>
+      <li>Missions décrites par arbres de comportement (nœuds personnalisés : changement de carte, relocalisation, appel et attente d’ascenseur).</li>
+      <li>Fleet Manager : file d’attente FIFO et verrouillage par jeton pour l’accès à l’ascenseur ; frames TF2 isolés par robot.</li>
+      <li>Chaîne de commande Behavior Tree → MQTT → Raspberry Pi 4 → Gazebo ; extension par apprentissage par renforcement (PPO).</li>
+    </ul>
+    <div class="chips"><span class="chip">ROS 2 Jazzy</span><span class="chip">Nav2</span><span class="chip">AMCL</span><span class="chip">SLAM Toolbox</span><span class="chip">BehaviorTree.CPP v4</span><span class="chip">Gazebo Harmonic</span><span class="chip">MQTT</span><span class="chip">Raspberry Pi 4</span><span class="chip">stable-baselines3</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Application ADAS sous ROS 2</h3>
+    <p class="muted">Projet académique · octobre 2025</p>
+    <p>Assistance à la conduite miniature avec caméra et LIDAR dans Gazebo : détection de voie, évitement d’obstacles et commande moteur autonome.</p>
+    <div class="chips"><span class="chip">ROS 2</span><span class="chip">OpenCV</span><span class="chip">Gazebo</span><span class="chip">LIDAR</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Tri intelligent de composants électroniques par IA</h3>
+    <p class="muted">Stage EmkaMed Tunisie · 2025</p>
+    <p>Classification de composants conformes et non conformes, modèle intégré sur Raspberry Pi 3 avec capture en temps réel et validation expérimentale.</p>
+    <div class="chips"><span class="chip">Deep learning</span><span class="chip">Raspberry Pi 3</span><span class="chip">Python</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Système de détection de chutes</h3>
+    <p class="muted">Projet académique · avril 2025</p>
+    <p>Carte STM32 avec accéléromètre, GPS et module Wi-Fi ESP32 ; alertes automatiques (position, heure) vers un serveur web en cas de chute ou d’alerte manuelle.</p>
+    <div class="chips"><span class="chip">STM32</span><span class="chip">ESP32</span><span class="chip">C/C++</span><span class="chip">I²C · UART</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Module capteur MEMS sur PCB</h3>
+    <p class="muted">Projet académique · novembre 2025</p>
+    <p>Conception d’un shield pour le capteur LIS12DE avec convertisseur TPS63051.</p>
+    <div class="chips"><span class="chip">Altium</span><span class="chip">PCB</span><span class="chip">MEMS</span></div>
+  </div>
+
+  <h2>Compétences</h2>
+  <dl class="skills">
+    <dt>Robotique</dt>
+    <dd class="chips"><span class="chip">ROS 2</span><span class="chip">Nav2</span><span class="chip">SLAM Toolbox</span><span class="chip">TF2</span><span class="chip">BehaviorTree.CPP</span><span class="chip">Gazebo</span><span class="chip">RViz2</span></dd>
+    <dt>Langages</dt>
+    <dd class="chips"><span class="chip">C++</span><span class="chip">C</span><span class="chip">Python</span><span class="chip">VHDL</span></dd>
+    <dt>Embarqué &amp; communication</dt>
+    <dd class="chips"><span class="chip">STM32</span><span class="chip">ESP32</span><span class="chip">Raspberry Pi</span><span class="chip">I²C</span><span class="chip">SPI</span><span class="chip">UART</span><span class="chip">MQTT</span></dd>
+    <dt>Environnement</dt>
+    <dd class="chips"><span class="chip">Linux (Ubuntu)</span><span class="chip">OpenCV</span><span class="chip">MATLAB/Simulink</span><span class="chip">TIA Portal</span></dd>
+  </dl>
+
+  <footer>
+    <p>Contact : <a href="mailto:hybambarek66@gmail.com">hybambarek66@gmail.com</a> · +216 54 249 480</p>
+  </footer>
+</div>
+</body>
+</html>
